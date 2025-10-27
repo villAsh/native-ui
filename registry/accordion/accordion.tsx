@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Pressable, View, Text, LayoutAnimation, Platform, UIManager } from 'react-native';
-import { Feather } from '@expo/vector-icons';
 import { cn } from '@/lib/utils';
+import {ChevronDown} from "lucide-react-native";
 
 // Enable layout animation for Android
 if (Platform.OS === 'android') {
@@ -152,7 +152,7 @@ const AccordionTrigger = ({
         )}
       </View>
       <View style={{ transform: [{ rotate: `${iconRotation}deg` }] }}>
-        <Feather name="chevron-down" size={20} color="#888" />
+        <ChevronDown size={20} color="#888" />
       </View>
     </Pressable>
   );
