@@ -10,7 +10,7 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
-import { Ionicons } from "@expo/vector-icons";
+import {Trash2, TriangleAlert, AlertCircle, Star } from "lucide-react-native";
 import * as React from "react";
 import { ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -79,7 +79,7 @@ export default function AlertDialogExample() {
                         <AlertDialog open={deleteOpen} onOpenChange={setDeleteOpen}>
                             <AlertDialogTrigger asChild>
                                 <Button variant="destructive">
-                                    <Ionicons name="trash-outline" size={20} className="color-primary" />
+                                    <Trash2 name="trash-outline" size={20} className="color-primary" />
                                     <Text className="text-white ml-2">Delete Account</Text>
                                 </Button>
                             </AlertDialogTrigger>
@@ -87,7 +87,7 @@ export default function AlertDialogExample() {
                                 <AlertDialogHeader>
                                     <View className="items-center mb-4">
                                         <View className="w-12 h-12 bg-destructive/10 rounded-full items-center justify-center">
-                                            <Ionicons
+                                            <TriangleAlert
                                                 name="warning-outline"
                                                 size={32}
                                                 className="color-primary"
@@ -132,7 +132,7 @@ export default function AlertDialogExample() {
                                 <AlertDialogHeader>
                                     <View className="items-center mb-4">
                                         <View className="w-12 h-12 bg-orange-100 rounded-full items-center justify-center">
-                                            <Ionicons
+                                            <AlertCircle
                                                 name="alert-circle-outline"
                                                 size={32}
                                                 className="color-primary"
@@ -187,7 +187,7 @@ export default function AlertDialogExample() {
                         <AlertDialog open={customOpen} onOpenChange={setCustomOpen}>
                             <AlertDialogTrigger asChild>
                                 <Button variant="outline" className="bg-purple-100">
-                                    <Ionicons name="star" size={20} className="color-primary" />
+                                    <Star name="star" size={20} className="color-primary" />
                                     <Text className="text-purple-600 ml-2">Premium Feature</Text>
                                 </Button>
                             </AlertDialogTrigger>
@@ -195,7 +195,7 @@ export default function AlertDialogExample() {
                                 <AlertDialogHeader>
                                     <View className="items-center mb-4">
                                         <View className="w-12 h-12 bg-purple-100 rounded-full items-center justify-center">
-                                            <Ionicons name="star" size={32} className="color-primary" />
+                                            <Star name="star" size={32} className="color-primary" />
                                         </View>
                                     </View>
                                     <AlertDialogTitle>Upgrade to Premium</AlertDialogTitle>
