@@ -4,6 +4,7 @@ import { useColorScheme } from "nativewind";
 import React, { useState } from "react";
 import { ActivityIndicator, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Feather } from "lucide-react-native";
 
 export default function ButtonScreen() {
   const [counter, setCounter] = useState(0);
