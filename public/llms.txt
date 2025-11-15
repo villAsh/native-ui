@@ -301,7 +301,7 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Checkbox
 - **Description**: A checkbox component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/checkbox
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Checked/unchecked states, indeterminate state, custom icons
 
 #### Radio Group
@@ -325,14 +325,14 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Select
 - **Description**: A select component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/select
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Registry Dependencies**: drawer
 - **Features**: Dropdown selection, search, custom options
 
 #### Combobox
 - **Description**: A combobox component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/combobox
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Registry Dependencies**: drawer, input
 - **Features**: Searchable dropdown, autocomplete, custom filtering
 
@@ -359,13 +359,13 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Accordion
 - **Description**: An accordion component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/accordion
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg lucid-react-native
 - **Features**: Collapsible sections, single/multiple expansion
 
 #### Collapsible
 - **Description**: A collapsible component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/collapsible
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Expand/collapse content, smooth animations
 
 #### Tabs
@@ -412,13 +412,13 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Breadcrumb
 - **Description**: A breadcrumb component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/breadcrumb
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Navigation hierarchy, separators, clickable items
 
 #### Pagination
 - **Description**: A pagination component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/pagination
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Page navigation, first/last buttons, ellipsis
 
 ### Overlay Components
@@ -426,7 +426,7 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Dialog
 - **Description**: A dialog component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/dialog
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Modal dialogs, backdrop dismiss, animations
 
 #### Alert Dialog
@@ -438,7 +438,7 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Sheet
 - **Description**: A sheet component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/sheet
-- **Dependencies**: react-native, react-native-safe-area-context, @expo/vector-icons
+- **Dependencies**: react-native, react-native-safe-area-context, react-native-svg, lucid-react-native
 - **Features**: Bottom sheets, drag gestures, safe area handling
 
 #### Drawer
@@ -462,7 +462,7 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Dropdown
 - **Description**: A dropdown component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/dropdown
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Menu items, separators, keyboard navigation
 
 ### Utility Components
@@ -496,7 +496,7 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Carousel
 - **Description**: A carousel component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/carousel
-- **Dependencies**: react-native, @expo/vector-icons
+- **Dependencies**: react-native, react-native-svg, lucid-react-native
 - **Features**: Swipeable content, indicators, auto-play
 
 ### Date & Time Components
@@ -504,13 +504,13 @@ npx shadcn@latest add https://nativeui.io/registry/card
 #### Calendar
 - **Description**: A calendar component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/calendar
-- **Dependencies**: react-native, date-fns, @expo/vector-icons, @react-native-community/datetimepicker
+- **Dependencies**: react-native, date-fns, react-native-svg, lucid-react-native, @react-native-community/datetimepicker
 - **Features**: Date selection, month/year navigation, localization
 
 #### Date Time Picker
 - **Description**: A date time picker component for React Native applications
 - **Registry URL**: https://nativeui.io/registry/date-time-picker
-- **Dependencies**: react-native, date-fns, @expo/vector-icons
+- **Dependencies**: react-native, date-fns, react-native-svg, lucid-react-native
 - **Registry Dependencies**: calendar
 - **Features**: Date/time selection, format customization
 
