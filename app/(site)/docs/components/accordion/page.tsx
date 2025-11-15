@@ -6,13 +6,14 @@ export default function AccordionPage() {
       name="Accordion"
       description="A accordion component for React Native applications."
       examples={[
-  {
-    "title": "Default",
-    "value": "default",
-    "content": "import { Accordion } from \"@nativeui/ui\";\n\nexport default function AccordionDemo() {\n  return (\n    <Accordion>\n      Click me\n    </Accordion>\n  );\n}",
-    "language": "tsx"
-  }
-]}
+        {
+          title: "Default",
+          value: "default",
+          content:
+            'import { Accordion } from "@nativeui/ui";\n\nexport default function AccordionDemo() {\n  return (\n    <Accordion>\n      Click me\n    </Accordion>\n  );\n}',
+          language: "tsx",
+        },
+      ]}
       componentCode={`import * as React from 'react';
 import { Pressable, View, Text, LayoutAnimation, Platform, UIManager } from 'react-native';
 import { cn } from '@/lib/utils';
@@ -320,7 +321,7 @@ export default function AccordionExample() {
 `}
       registryName="accordion"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons"]}
+      dependencies={["react-native", "react-native-svg", "lucide-react-native"]}
       changelog={[]}
     />
   );
