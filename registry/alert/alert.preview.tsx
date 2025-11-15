@@ -1,9 +1,5 @@
-import {
-    Alert,
-    AlertDescription,
-    AlertTitle
-} from "@/components/ui/alert";
-import { Feather } from "@expo/vector-icons";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Feather } from "lucide-react-native";
 import * as React from "react";
 import { ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
