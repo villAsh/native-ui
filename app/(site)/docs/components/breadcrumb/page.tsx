@@ -462,7 +462,7 @@ export default function BreadcrumbExample() {
 `}
       registryName="breadcrumb"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons"]}
+      dependencies={["react-native","lucid-react-native"]}
       changelog={[]}
     />
   );

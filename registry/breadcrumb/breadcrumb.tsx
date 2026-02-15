@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, Text, Pressable, GestureResponderEvent } from "react-native";
-import { Feather } from "@expo/vector-icons";
+import { ChevronRight, MoreHorizontal } from "lucide-react-native";
 import { cn } from "@/lib/utils";
 
 const Breadcrumb = React.forwardRef<
@@ -129,7 +129,7 @@ const BreadcrumbSeparator = ({
     className={cn("mx-0.5", className)}
     {...props}
   >
-    {children ?? <Feather name="chevron-right" size={20} color="#888" />}
+    {children ?? <ChevronRight size={20} color="#888" />}
   </View>
 );
 
@@ -147,7 +147,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex items-center justify-center py-1", className)}
     {...props}
   >
-    <Feather name="more-horizontal" size={20} color="#888" />
+    <MoreHorizontal size={20} color="#888" />
     <Text className="sr-only">More</Text>
   </View>
 );
