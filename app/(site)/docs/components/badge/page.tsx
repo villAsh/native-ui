@@ -135,7 +135,7 @@ Badge.displayName = "Badge";
 
 export { Badge, badgeVariants }; `}
       previewCode={`import { Badge } from "@/components/ui/badge";
-import { Feather } from "@expo/vector-icons";
+import { Check, X, Star, AlertCircle } from "lucide-react-native";
 import { useColorScheme } from "nativewind";
 import React from "react";
 import { Alert, ScrollView, Text, View } from "react-native";
@@ -194,8 +194,7 @@ export default function BadgeExample() {
                         <View className="flex-row items-center gap-4">
                             <Badge variant="default" size="default">
                                 <View className="flex-row items-center">
-                                    <Feather
-                                        name="check"
+                                    <Check
                                         size={14}
                                         className="color-primary mr-4"
                                     />
@@ -209,8 +208,7 @@ export default function BadgeExample() {
                                     <Text className="text-xs font-medium text-primary-foreground">
                                         Delete
                                     </Text>
-                                    <Feather
-                                        name="x"
+                                    <X
                                         size={14}
                                         onPress={() => Alert.alert("Badge Clicked", "You clicked the delete badge")}
                                         color={isDark ? "#171717" : "white"}
@@ -220,8 +218,7 @@ export default function BadgeExample() {
                             </Badge>
                             <Badge variant="secondary" size="default">
                                 <View className="flex-row items-center">
-                                    <Feather
-                                        name="star"
+                                    <Star
                                         size={14}
                                         color={isDark ? "white" : "#171717"}
                                         style={{ marginRight: 4 }}
@@ -233,8 +230,7 @@ export default function BadgeExample() {
                             </Badge>
                             <Badge variant="destructive" size="default">
                                 <View className="flex-row items-center">
-                                    <Feather
-                                        name="alert-circle"
+                                    <AlertCircle
                                         size={14}
                                         color={isDark ? "white" : "#171717"}
                                         style={{ marginRight: 4 }}
