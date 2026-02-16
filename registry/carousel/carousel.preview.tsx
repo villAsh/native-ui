@@ -3,7 +3,7 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
-import { Ionicons } from "@expo/vector-icons";
+import { MoreHorizontal, Heart, MessageCircle, Send, Bookmark } from "lucide-react-native";
 import * as React from "react";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -52,7 +52,7 @@ const InstagramPost = () => {
                 />
                 <Text className="ml-3 font-semibold text-foreground">shadcn</Text>
                 <Pressable className="ml-auto">
-                    <Ionicons name="ellipsis-horizontal" size={20} color="#666" />
+                    <MoreHorizontal size={20} color="#666" />
                 </Pressable>
             </View>
 
@@ -98,13 +98,13 @@ const InstagramPost = () => {
             <View className="p-4">
                 <View className="flex-row items-center gap-4 mb-3">
                     <Pressable>
-                        <Ionicons name="heart-outline" size={24} color="#666" />
+                        <Heart size={24} color="#666" />
                     </Pressable>
                     <Pressable>
-                        <Ionicons name="chatbubble-outline" size={24} color="#666" />
+                        <MessageCircle size={24} color="#666" />
                     </Pressable>
                     <Pressable>
-                        <Ionicons name="paper-plane-outline" size={24} color="#666" />
+                        <Send size={24} color="#666" />
                     </Pressable>
                     {images.length > 1 && (
                         <View className="flex-row gap-1.5 flex-1 justify-center">
@@ -128,7 +128,7 @@ const InstagramPost = () => {
                         </View>
                     )}
                     <Pressable>
-                        <Ionicons name="bookmark-outline" size={24} color="#666" />
+                        <Bookmark size={24} color="#666" />
                     </Pressable>
                 </View>
 

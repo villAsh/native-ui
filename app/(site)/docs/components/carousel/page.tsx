@@ -760,7 +760,7 @@ export default function CarouselExample() {
 `}
       registryName="carousel"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons"]}
+      dependencies={["react-native","lucid-react-native"]}
       changelog={[]}
     />
   );

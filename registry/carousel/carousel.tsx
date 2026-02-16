@@ -8,7 +8,7 @@ import {
   AccessibilityInfo,
 } from "react-native";
 import { cn } from "@/lib/utils";
-import { Ionicons } from "@expo/vector-icons";
+import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown } from "lucide-react-native";
 
 type CarouselContextProps = {
   scrollViewRef: React.RefObject<ScrollView | null>;
@@ -374,11 +374,7 @@ const CarouselPrevious = React.forwardRef<
       accessibilityLabel="Previous image"
       {...props}
     >
-      <Ionicons
-        name={orientation === "horizontal" ? "chevron-back" : "chevron-up"}
-        size={28}
-        color="#000"
-      />
+      {orientation === "horizontal" ? <ChevronLeft size={28} color="#000" /> : <ChevronUp size={28} color="#000" />}
     </Pressable>
   );
 });
@@ -406,13 +402,7 @@ const CarouselNext = React.forwardRef<View, React.ComponentProps<typeof View>>(
         accessibilityLabel="Next image"
         {...props}
       >
-        <Ionicons
-          name={
-            orientation === "horizontal" ? "chevron-forward" : "chevron-down"
-          }
-          size={28}
-          color="#000"
-        />
+        {orientation === "horizontal" ? <ChevronRight size={28} color="#000" /> : <ChevronDown size={28} color="#000" />}
       </Pressable>
     );
   }
