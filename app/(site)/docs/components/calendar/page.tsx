@@ -975,7 +975,7 @@ export default function CalendarExample() {
 `}
       registryName="calendar"
       packageName="@nativeui/ui"
-      dependencies={["react-native","date-fns","@expo/vector-icons","@react-native-community/datetimepicker"]}
+      dependencies={["react-native","date-fns","lucid-react-native","@react-native-community/datetimepicker"]}
       changelog={[]}
     />
   );

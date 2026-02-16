@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Ionicons } from "@expo/vector-icons";
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronForward, Clock } from "lucide-react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import {
   addMonths,
@@ -114,7 +114,7 @@ const CalendarHeader = React.memo(({
       onPress={onPrevMonth}
       className="p-2 rounded-full bg-muted active:scale-90 transition-transform"
     >
-      <Ionicons name="chevron-back" size={24} className="color-primary" />
+      <ChevronLeft size={24} className="color-primary" />
     </Pressable>
 
     {enableQuickMonthYear ? (
@@ -125,7 +125,7 @@ const CalendarHeader = React.memo(({
         <Text className="text-xl font-semibold text-foreground">
           {format(currentDate, "MMMM yyyy", { locale: enUS })}
         </Text>
-        <Ionicons name="chevron-down" size={20} className="color-primary" />
+        <ChevronDown size={20} className="color-primary" />
       </Pressable>
     ) : (
       <Text className="text-xl font-semibold text-foreground">
@@ -137,7 +137,7 @@ const CalendarHeader = React.memo(({
       onPress={onNextMonth}
       className="p-2 rounded-full bg-muted active:scale-90 transition-transform"
     >
-      <Ionicons name="chevron-forward" size={24} className="color-primary" />
+      <ChevronRight size={24} className="color-primary" />
     </Pressable>
   </View>
 ));
@@ -248,7 +248,7 @@ const TimeSelector = React.memo(({
     >
       <View className="flex-row items-center">
         <View className="bg-primary/10 p-2 rounded-full mr-4">
-          <Ionicons name="time-outline" size={22} className="text-foreground" />
+          <Clock size={22} className="text-foreground" />
         </View>
         <Text className="text-base font-medium text-foreground">
           {format(selectedDate, "HH:mm")}
@@ -258,11 +258,17 @@ const TimeSelector = React.memo(({
         <Text className="text-sm text-muted-foreground">
           {showTimePicker ? "Tap to close" : "Tap to change"}
         </Text>
-        <Ionicons
-          name={showTimePicker ? "chevron-down" : "chevron-forward"}
-          size={16}
-          className="text-muted-foreground"
-        />
+        {showTimePicker ? (
+          <ChevronDown
+            size={16}
+            className="text-muted-foreground"
+          />
+        ) : (
+          <ChevronForward
+            size={16}
+            className="text-muted-foreground"
+          />
+        )}
       </View>
     </Pressable>
   </View>
@@ -322,7 +328,7 @@ const MonthPicker = React.memo(({
               isPrevYearDisabled && "opacity-50"
             )}
           >
-            <Ionicons name="chevron-back" size={24} className="text-black" />
+            <ChevronLeft size={24} className="text-black" />
           </Pressable>
 
           <Pressable
@@ -333,7 +339,7 @@ const MonthPicker = React.memo(({
               {currentYear}
             </Text>
             <View className="ml-2">
-              <Ionicons name="chevron-forward" size={20} className="text-black" />
+              <ChevronRight size={20} className="text-black" />
             </View>
           </Pressable>
 
@@ -345,7 +351,7 @@ const MonthPicker = React.memo(({
               isNextYearDisabled && "opacity-50"
             )}
           >
-            <Ionicons name="chevron-forward" size={24} className="text-black" />
+            <ChevronRight size={24} className="text-black" />
           </Pressable>
         </View>
         <View className="flex-row flex-wrap justify-between">
@@ -424,7 +430,7 @@ const YearPicker = React.memo(({
               isPrevDisabled && "opacity-50"
             )}
           >
-            <Ionicons name="chevron-back" size={24} className="text-black" />
+            <ChevronLeft size={24} className="text-black" />
           </Pressable>
           <Text className="text-xl font-semibold text-black">
             {`${startYear} - ${startYear + 19}`}
@@ -437,7 +443,7 @@ const YearPicker = React.memo(({
               isNextDisabled && "opacity-50"
             )}
           >
-            <Ionicons name="chevron-forward" size={24} className="text-black" />
+            <ChevronRight size={24} className="text-black" />
           </Pressable>
         </View>
 
