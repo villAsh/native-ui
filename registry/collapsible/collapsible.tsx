@@ -7,7 +7,7 @@ import {
   UIManager,
 } from "react-native";
 import { cn } from "@/lib/utils";
-import { Feather } from "@expo/vector-icons";
+import { ChevronDown } from "lucide-react-native";
 
 // Enable layout animation for Android
 if (Platform.OS === "android") {
@@ -132,7 +132,7 @@ const CollapsibleTrigger = React.forwardRef<View, CollapsibleTriggerProps>(
         <View className="flex-row items-center flex-1">{children}</View>
         {icon && (
           <View style={{ transform: [{ rotate: open ? "180deg" : "0deg" }] }}>
-            <Feather name="chevron-down" size={20} color="#888" />
+            <ChevronDown size={20} color="#888" />
           </View>
         )}
       </Pressable>

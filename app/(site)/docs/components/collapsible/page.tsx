@@ -611,7 +611,7 @@ export default function CollapsibleExample() {
 `}
       registryName="collapsible"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons"]}
+      dependencies={["react-native","lucid-react-native"]}
       changelog={[]}
     />
   );

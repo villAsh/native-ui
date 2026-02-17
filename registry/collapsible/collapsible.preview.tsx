@@ -3,7 +3,7 @@ import {
     CollapsibleContent,
     CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { Feather } from "@expo/vector-icons";
+import { Info } from "lucide-react-native";
 import * as React from "react";
 import {
     KeyboardAvoidingView,
@@ -223,8 +223,7 @@ export default function CollapsibleExample() {
                                 <Collapsible className="border border-border rounded-lg overflow-hidden">
                                     <CollapsibleTrigger className="bg-card" icon={false}>
                                         <View className="flex-row items-center">
-                                            <Feather
-                                                name="info"
+                                            <Info
                                                 size={20}
                                                 color="#888"
                                                 className="mr-2"
