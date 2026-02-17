@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Ionicons } from "@expo/vector-icons"
+import { Check } from "lucide-react-native"
 import { useColorScheme } from "nativewind"
 import * as React from "react"
 import { Pressable, Text } from "react-native"
@@ -72,8 +72,7 @@ const Checkbox = React.forwardRef<
       {...props}
     >
       {isChecked && (
-        <Ionicons
-          name="checkmark-sharp"
+        <Check
           size={18}
           className="color-primary-foreground"
         />

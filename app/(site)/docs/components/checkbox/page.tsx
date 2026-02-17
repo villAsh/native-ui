@@ -296,7 +296,7 @@ export default function CheckboxExample() {
 `}
       registryName="checkbox"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons"]}
+      dependencies={["react-native","lucid-react-native"]}
       changelog={[]}
     />
   );
