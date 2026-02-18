@@ -766,7 +766,7 @@ export default function DateTimePickerExample() {
 `}
       registryName="date-time-picker"
       packageName="@nativeui/ui"
-      dependencies={["react-native","date-fns","@expo/vector-icons","@nativeui/ui/calendar"]}
+      dependencies={["react-native","date-fns","lucid-react-native","@nativeui/ui/calendar"]}
       changelog={[]}
     />
   );

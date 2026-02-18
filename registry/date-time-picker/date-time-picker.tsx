@@ -1,6 +1,6 @@
 import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
-import { Ionicons } from "@expo/vector-icons";
+import { Calendar as CalendarIcon } from "lucide-react-native";
 import { format } from "date-fns";
 import { enUS } from "date-fns/locale";
 import * as React from "react";
@@ -70,16 +70,7 @@ const formatDisplayValue = (
   return placeholder;
 };
 
-const getInputIcon = (mode: "single" | "range" | "datetime") => {
-  switch (mode) {
-    case "datetime":
-      return "calendar-outline";
-    case "range":
-      return "calendar-outline";
-    default:
-      return "calendar-outline";
-  }
-};
+const getInputIcon = () => CalendarIcon;
 
 const DateTimePicker = React.forwardRef<View, DateTimePickerProps>(
   (
@@ -110,7 +101,7 @@ const DateTimePicker = React.forwardRef<View, DateTimePickerProps>(
     const scaleAnim = React.useRef(new Animated.Value(0.95)).current;
 
     const displayValue = formatDisplayValue(value, mode, placeholder);
-    const iconName = getInputIcon(mode);
+    const IconComponent = getInputIcon();
 
     const sizeClasses = {
       sm: "h-10 px-3 text-sm",
@@ -192,8 +183,7 @@ const DateTimePicker = React.forwardRef<View, DateTimePickerProps>(
           {...props}
         >
           <View className="ml-3 mr-2">
-            <Ionicons
-              name={iconName as any}
+            <IconComponent
               size={iconSizes[size]}
               color={disabled ? "#999" : "#666"}
             />
