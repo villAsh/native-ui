@@ -7,7 +7,7 @@ import {
   FlatList,
   TextInput,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Search, XCircle, ChevronDown, Check, CheckCircle } from "lucide-react-native";
 import { cn } from "@/lib/utils";
 import { Drawer, useDrawer } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
@@ -86,12 +86,12 @@ const ComboboxSearchInput = ({
           returnKeyType="search"
         />
         <View className="absolute left-3 top-1/2 transform -translate-y-1/2">
-          <Ionicons name="search" size={20} color="#9CA3AF" />
+          <Search size={20} color="#9CA3AF" />
         </View>
         {value.length > 0 && (
           <View className="absolute right-3 top-1/2 transform -translate-y-1/2">
             <Pressable onPress={handleClear} hitSlop={8}>
-              <Ionicons name="close-circle" size={18} color="#9CA3AF" />
+              <XCircle size={18} color="#9CA3AF" />
             </Pressable>
           </View>
         )}
@@ -142,7 +142,7 @@ const SelectedValuesList = ({
               hitSlop={8}
               className="p-1"
             >
-              <Ionicons name="close-circle" size={16} color="#71717a" />
+              <XCircle size={16} color="#71717a" />
             </Pressable>
           </View>
         ))}
@@ -302,8 +302,7 @@ const Combobox = React.forwardRef<View, ComboboxProps>(
             )}
           </View>
 
-          <Ionicons
-            name="chevron-down"
+          <ChevronDown
             size={16}
             color="#9CA3AF"
             style={{ marginLeft: 8, opacity: 0.7 }}
@@ -438,11 +437,7 @@ const ComboboxItem = React.forwardRef<typeof Pressable, ComboboxItemProps>(
         </Text>
 
         {isSelected && (
-          <Ionicons
-            name={multiple ? "checkmark-circle" : "checkmark"}
-            size={20}
-            color="#3b82f6"
-          />
+          multiple ? <CheckCircle size={20} color="#3b82f6" /> : <Check size={20} color="#3b82f6" />
         )}
       </Pressable>
     );

@@ -787,7 +787,7 @@ export default function ComboboxExample() {
 }`}
       registryName="combobox"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons","@nativeui/ui/drawer","@nativeui/ui/input"]}
+      dependencies={["react-native","lucid-react-native","@nativeui/ui/drawer","@nativeui/ui/input"]}
       changelog={[]}
     />
   );
