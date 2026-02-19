@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Ionicons } from "@expo/vector-icons";
+import { Check, RotateCw } from "lucide-react-native";
 import * as React from "react";
 import {
     KeyboardAvoidingView,
@@ -211,7 +211,7 @@ export default function DialogExample() {
                                     <DialogHeader>
                                         <View className="items-center">
                                             <View className="w-12 h-12 bg-green-100 rounded-full items-center justify-center mb-4">
-                                                <Ionicons name="checkmark" size={32} color="green" />
+                                                <Check size={32} color="green" />
                                             </View>
                                             <DialogTitle>Payment Successful</DialogTitle>
                                             <DialogDescription>
@@ -251,7 +251,7 @@ export default function DialogExample() {
                                 <DialogContent showCloseButton={false}>
                                     <View className="p-6 items-center">
                                         <View className="w-12 h-12 mb-4">
-                                            <Ionicons name="reload" size={48} color="#666" />
+                                            <RotateCw size={48} color="#666" />
                                         </View>
                                         <Text className="text-lg font-semibold text-foreground mb-2">
                                             Processing

@@ -12,7 +12,7 @@ import {
   ScrollView,
 } from "react-native";
 import { cn } from "@/lib/utils";
-import { Ionicons } from "@expo/vector-icons";
+import { X } from "lucide-react-native";
 
 interface DialogProps {
   children: React.ReactNode;
@@ -247,7 +247,7 @@ const DialogContent = React.forwardRef<View, DialogContentProps>(
                           onPress={handleClose}
                           className="absolute right-4 top-4 z-50 rounded-full p-2 bg-muted/50"
                         >
-                          <Ionicons name="close" size={24} color="#666" />
+                          <X size={24} color="#666" />
                         </Pressable>
                       )}
                       {children}
