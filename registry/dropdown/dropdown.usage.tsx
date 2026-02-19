@@ -8,8 +8,8 @@ import {
     DropdownSeparator,
     DropdownTrigger,
 } from "@/components/ui/dropdown";
-import * as React from "react";
-import { Text } from "react-native";
+import { User, Settings, HelpCircle } from "lucide-react-native";
+
 export default function DropdownExample() {
     const [basicOpen, setBasicOpen] = React.useState(false);
 
@@ -21,13 +21,13 @@ export default function DropdownExample() {
                 </Button>
             </DropdownTrigger>
             <DropdownContent>
-                <DropdownItem icon="person-outline" onSelect={() => console.log("Profile")}>
+                <DropdownItem icon={<User size={20} color="#6B7280" />} onSelect={() => console.log("Profile")}>
                     Profile
                 </DropdownItem>
-                <DropdownItem icon="settings-outline" onSelect={() => console.log("Settings")}>
+                <DropdownItem icon={<Settings size={20} color="#6B7280" />} onSelect={() => console.log("Settings")}>
                     Settings
                 </DropdownItem>
-                <DropdownItem icon="help-circle-outline" onSelect={() => console.log("Help")}>
+                <DropdownItem icon={<HelpCircle size={20} color="#6B7280" />} onSelect={() => console.log("Help")}>
                     Help Center
                 </DropdownItem>
             </DropdownContent>

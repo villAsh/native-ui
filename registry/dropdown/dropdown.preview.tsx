@@ -8,15 +8,30 @@ import {
     DropdownSeparator,
     DropdownTrigger,
 } from "@/components/ui/dropdown";
-import * as React from "react";
-import { ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { 
+    User, 
+    Settings, 
+    HelpCircle, 
+    CreditCard, 
+    Bell, 
+    Lock, 
+    Palette, 
+    Type, 
+    Eye, 
+    Share, 
+    Copy, 
+    Archive, 
+    Trash2 
+} from "lucide-react-native";
 
 export default function DropdownExample() {
     const [basicOpen, setBasicOpen] = React.useState(false);
     const [profileOpen, setProfileOpen] = React.useState(false);
     const [settingsOpen, setSettingsOpen] = React.useState(false);
     const [moreOpen, setMoreOpen] = React.useState(false);
+
+    const iconColor = "#6B7280";
+    const destructiveColor = "#EF4444";
 
     return (
         <>
@@ -30,7 +45,6 @@ export default function DropdownExample() {
                             Displays a menu to the user — triggered by a button.
                         </Text>
                     </View>
-
                     {/* Basic Dropdown */}
                     <View className="mb-8">
                         <Text className="text-xl font-semibold mb-4 text-foreground">
@@ -43,13 +57,13 @@ export default function DropdownExample() {
                                 </Button>
                             </DropdownTrigger>
                             <DropdownContent>
-                                <DropdownItem icon="person-outline" onSelect={() => console.log("Profile")}>
+                                <DropdownItem icon={<User size={20} color={iconColor} />} onSelect={() => console.log("Profile")}>
                                     Profile
                                 </DropdownItem>
-                                <DropdownItem icon="settings-outline" onSelect={() => console.log("Settings")}>
+                                <DropdownItem icon={<Settings size={20} color={iconColor} />} onSelect={() => console.log("Settings")}>
                                     Settings
                                 </DropdownItem>
-                                <DropdownItem icon="help-circle-outline" onSelect={() => console.log("Help")}>
+                                <DropdownItem icon={<HelpCircle size={20} color={iconColor} />} onSelect={() => console.log("Help")}>
                                     Help Center
                                 </DropdownItem>
                             </DropdownContent>
@@ -71,21 +85,21 @@ export default function DropdownExample() {
                                 <DropdownLabel>My Account</DropdownLabel>
                                 <DropdownGroup>
                                     <DropdownItem
-                                        icon="person-outline"
+                                        icon={<User size={20} color={iconColor} />}
                                         onSelect={() => console.log("Profile")}
                                         shortcut="⌘P"
                                     >
                                         Profile
                                     </DropdownItem>
                                     <DropdownItem
-                                        icon="card-outline"
+                                        icon={<CreditCard size={20} color={iconColor} />}
                                         onSelect={() => console.log("Billing")}
                                         shortcut="⌘B"
                                     >
                                         Billing
                                     </DropdownItem>
                                     <DropdownItem
-                                        icon="settings-outline"
+                                        icon={<Settings size={20} color={iconColor} />}
                                         onSelect={() => console.log("Settings")}
                                         shortcut="⌘S"
                                     >
@@ -95,13 +109,13 @@ export default function DropdownExample() {
                                 <DropdownSeparator />
                                 <DropdownGroup>
                                     <DropdownItem
-                                        icon="notifications-outline"
+                                        icon={<Bell size={20} color={iconColor} />}
                                         onSelect={() => console.log("Notifications")}
                                     >
                                         Notifications
                                     </DropdownItem>
                                     <DropdownItem
-                                        icon="lock-closed-outline"
+                                        icon={<Lock size={20} color={iconColor} />}
                                         onSelect={() => console.log("Privacy")}
                                     >
                                         Privacy
@@ -125,13 +139,13 @@ export default function DropdownExample() {
                             <DropdownContent>
                                 <DropdownLabel>Appearance</DropdownLabel>
                                 <DropdownItem
-                                    icon="color-palette-outline"
+                                    icon={<Palette size={20} color={iconColor} />}
                                     onSelect={() => console.log("Theme")}
                                 >
                                     Theme
                                 </DropdownItem>
                                 <DropdownItem
-                                    icon="text-outline"
+                                    icon={<Type size={20} color={iconColor} />}
                                     onSelect={() => console.log("Font Size")}
                                 >
                                     Font Size
@@ -139,13 +153,13 @@ export default function DropdownExample() {
                                 <DropdownSeparator />
                                 <DropdownLabel>Privacy</DropdownLabel>
                                 <DropdownItem
-                                    icon="eye-outline"
+                                    icon={<Eye size={20} color={iconColor} />}
                                     onSelect={() => console.log("Visibility")}
                                 >
                                     Visibility
                                 </DropdownItem>
                                 <DropdownItem
-                                    icon="notifications-outline"
+                                    icon={<Bell size={20} color={iconColor} />}
                                     onSelect={() => console.log("Notifications")}
                                 >
                                     Notifications
@@ -167,26 +181,26 @@ export default function DropdownExample() {
                             </DropdownTrigger>
                             <DropdownContent>
                                 <DropdownItem
-                                    icon="share-outline"
+                                    icon={<Share size={20} color={iconColor} />}
                                     onSelect={() => console.log("Share")}
                                 >
                                     Share
                                 </DropdownItem>
                                 <DropdownItem
-                                    icon="duplicate-outline"
+                                    icon={<Copy size={20} color={iconColor} />}
                                     onSelect={() => console.log("Duplicate")}
                                 >
                                     Duplicate
                                 </DropdownItem>
                                 <DropdownSeparator />
                                 <DropdownItem
-                                    icon="archive-outline"
+                                    icon={<Archive size={20} color={iconColor} />}
                                     onSelect={() => console.log("Archive")}
                                 >
                                     Archive
                                 </DropdownItem>
                                 <DropdownItem
-                                    icon="trash-outline"
+                                    icon={<Trash2 size={20} color={destructiveColor} />}
                                     destructive
                                     onSelect={() => console.log("Delete")}
                                 >
