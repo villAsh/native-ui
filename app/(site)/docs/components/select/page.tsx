@@ -479,7 +479,7 @@ export default function SelectExample() {
 `}
       registryName="select"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons","@nativeui/ui/drawer"]}
+      dependencies={["react-native","lucid-react-native","@nativeui/ui/drawer"]}
       changelog={[]}
     />
   );

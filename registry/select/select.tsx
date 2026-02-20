@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, Text, Pressable, ScrollView, Platform } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { ChevronDown, Check } from "lucide-react-native";
 import { cn } from "@/lib/utils";
 import { Drawer, useDrawer } from "@/components/ui/drawer";
 
@@ -159,8 +159,7 @@ const Select = React.forwardRef<View, SelectProps>(
               : placeholder || "Select an option"}
           </Text>
 
-          <Ionicons
-            name="chevron-down"
+          <ChevronDown
             size={16}
             color="#9CA3AF"
             style={{ marginLeft: 8, opacity: 0.7 }}
@@ -248,7 +247,7 @@ const SelectItem = React.forwardRef<typeof Pressable, SelectItemProps>(
           {children}
         </Text>
 
-        {isSelected && <Ionicons name="checkmark" size={20} color="#4F46E5" />}
+        {isSelected && <Check size={20} color="#4F46E5" />}
       </Pressable>
     );
   }
