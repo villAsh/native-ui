@@ -394,7 +394,7 @@ export default function PaginationExampleScreen() {
 `}
       registryName="pagination"
       packageName="@nativeui/ui"
-      dependencies={["react-native","@expo/vector-icons"]}
+      dependencies={["react-native","lucid-react-native"]}
       changelog={[]}
     />
   );

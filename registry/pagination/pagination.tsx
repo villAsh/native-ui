@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, Text, Pressable } from "react-native";
-import { Feather } from "@expo/vector-icons";
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react-native";
 import { cn } from "@/lib/utils";
 
 const Pagination = ({
@@ -99,7 +99,7 @@ const PaginationPrevious = ({
 }: React.ComponentProps<typeof PaginationLink>) => (
   <PaginationLink size="default" className={cn("gap-1", className)} {...props}>
     <View className="flex-row items-center">
-      <Feather name="chevron-left" size={16} className="text-foreground" />
+      <ChevronLeft size={16} className="text-foreground" />
       <Text className="ml-0.5 text-sm text-foreground">Prev</Text>
     </View>
   </PaginationLink>
@@ -113,7 +113,7 @@ const PaginationNext = ({
   <PaginationLink size="default" className={cn("gap-1", className)} {...props}>
     <View className="flex-row items-center">
       <Text className="mr-0.5 text-sm text-foreground">Next</Text>
-      <Feather name="chevron-right" size={16} className="text-foreground" />
+      <ChevronRight size={16} className="text-foreground" />
     </View>
   </PaginationLink>
 );
@@ -127,7 +127,7 @@ const PaginationEllipsis = ({
     className={cn("flex h-10 w-10 items-center justify-center", className)}
     {...props}
   >
-    <Feather name="more-horizontal" size={16} className="text-foreground" />
+    <MoreHorizontal size={16} className="text-foreground" />
     <Text className="sr-only">More pages</Text>
   </View>
 );
