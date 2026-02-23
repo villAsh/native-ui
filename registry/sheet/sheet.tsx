@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import { SafeAreaView, Edge } from "react-native-safe-area-context";
 import { cn } from "@/lib/utils";
-import { Feather } from "@expo/vector-icons";
+import { X } from "lucide-react-native";
 
 // Animation config constants
 const ANIMATION = {
@@ -356,7 +356,7 @@ const Sheet = React.forwardRef<View, SheetProps>(
                   </View>
                   <TouchableWithoutFeedback onPress={animateClose}>
                     <View className="p-2 rounded-full bg-muted/50">
-                      <Feather name="x" size={20} color="#6B7280" />
+                      <X size={20} color="#6B7280" />
                     </View>
                   </TouchableWithoutFeedback>
                 </View>
