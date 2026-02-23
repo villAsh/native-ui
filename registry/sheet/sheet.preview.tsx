@@ -2,21 +2,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, useSheet } from "@/components/ui/sheet";
-import { Ionicons } from "@expo/vector-icons";
-import { Stack } from "expo-router";
-import * as React from "react";
-import {
-    Keyboard,
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    Text,
-    TouchableWithoutFeedback,
-    View,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { User, Bell, Lock, Moon, Globe, HelpCircle, Info, LogOut, MessageCircle, Settings, ChevronRight, ChevronUp } from "lucide-react-native";
 
-type IoniconName = React.ComponentProps<typeof Ionicons>["name"];
+type IconName = "User" | "Bell" | "Lock" | "Moon" | "Globe" | "HelpCircle" | "Info" | "LogOut";
 
 const FeedbackForm = () => {
     const [selectedRating, setSelectedRating] = React.useState<number | null>(
@@ -91,42 +79,52 @@ const SettingsList = () => {
     return (
         <ScrollView>
             {[
-                { icon: "person-outline" as IoniconName, label: "My Account" },
+                { icon: "User" as IconName, label: "My Account" },
                 {
-                    icon: "notifications-outline" as IoniconName,
+                    icon: "Bell" as IconName,
                     label: "Notifications",
                 },
-                { icon: "lock-closed-outline" as IoniconName, label: "Privacy" },
-                { icon: "moon-outline" as IoniconName, label: "Theme" },
+                { icon: "Lock" as IconName, label: "Privacy" },
+                { icon: "Moon" as IconName, label: "Theme" },
                 {
-                    icon: "globe-outline" as IoniconName,
+                    icon: "Globe" as IconName,
                     label: "Language",
                 },
-                { icon: "help-circle-outline" as IoniconName, label: "Help & Support" },
-                { icon: "information-circle-outline" as IoniconName, label: "About" },
-                { icon: "log-out-outline" as IoniconName, label: "Logout" },
-            ].map((item, index) => (
+                { icon: "HelpCircle" as IconName, label: "Help & Support" },
+                { icon: "Info" as IconName, label: "About" },
+                { icon: "LogOut" as IconName, label: "Logout" },
+            ].map((item, index) => {
+                const IconComponent = {
+                    User,
+                    Bell,
+                    Lock,
+                    Moon,
+                    Globe,
+                    HelpCircle,
+                    Info,
+                    LogOut
+                }[item.icon];
+                
+                return (
                 <View key={index}>
                     <Button
                         variant="ghost"
                         className="flex-row h-14 items-center px-4 py-2 border-b border-border rounded-none justify-start"
                     >
-                        <Ionicons
-                            name={item.icon}
+                        <IconComponent
                             size={22}
                             color="#6B7280"
                             style={{ marginRight: 12 }}
                         />
                         <Text className="text-base text-foreground">{item.label}</Text>
-                        <Ionicons
-                            name="chevron-forward"
+                        <ChevronRight
                             size={16}
                             color="#6B7280"
                             style={{ marginLeft: "auto" }}
                         />
                     </Button>
                 </View>
-            ))}
+            )})}
         </ScrollView>
     );
 };
@@ -330,8 +328,7 @@ export default function SheetExampleScreen() {
                                 onPress={() => setFeedbackSheetOpen(true)}
                                 className="bg-primary/10"
                             >
-                                <Ionicons
-                                    name="chatbubble-outline"
+                                <MessageCircle
                                     size={20}
                                     color="#4F46E5"
                                     style={{ marginRight: 8 }}
@@ -363,15 +360,14 @@ export default function SheetExampleScreen() {
                                 className="justify-between"
                             >
                                 <View className="flex-row items-center">
-                                    <Ionicons
-                                        name="settings-outline"
+                                    <Settings
                                         size={20}
                                         color="#6B7280"
                                         style={{ marginRight: 8 }}
                                     />
                                     <Text className="text-base text-foreground">Settings</Text>
                                 </View>
-                                <Ionicons name="chevron-up" size={16} color="#6B7280" />
+                                <ChevronUp size={16} color="#6B7280" />
                             </Button>
 
                             <Sheet
