@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Feather } from "@expo/vector-icons";
+import { Plus, Settings } from "lucide-react-native";
 import { useColorScheme } from "nativewind";
 import React, { useState } from "react";
 import { ActivityIndicator, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Feather } from "lucide-react-native";
 
 export default function ButtonScreen() {
   const [counter, setCounter] = useState(0);
@@ -105,7 +104,7 @@ export default function ButtonScreen() {
                   size="icon"
                   onPress={() => setCounter(counter + 1)}
                 >
-                  <Feather name="plus" size={16} />
+                  <Plus size={16} />
                 </Button>
               </View>
             </View>
@@ -137,7 +136,7 @@ export default function ButtonScreen() {
             <View className="gap-4">
               <View className="flex-row gap-3 flex-wrap">
                 <Button onPress={() => setCounter(counter + 1)}>
-                  <Feather name="plus" size={16} color={isDark ? "#111827" : "white"} />
+                  <Plus size={16} color={isDark ? "#111827" : "white"} />
                   <Text className="text-primary-foreground dark:text-primary-foreground ml-2">
                     With Icon
                   </Text>
@@ -147,7 +146,7 @@ export default function ButtonScreen() {
                   variant="outline"
                   onPress={() => setCounter(counter + 1)}
                 >
-                  <Feather name="settings" size={16} color={isDark ? "white" : "#111827"} />
+                  <Settings size={16} color={isDark ? "white" : "#111827"} />
                   <Text className="text-foreground dark:text-foreground ml-2">Settings</Text>
                 </Button>
               </View>
