@@ -1,5 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Feather } from "lucide-react-native";
+import { Bell, AlertCircle, CheckCircle, AlertTriangle, Info } from "lucide-react-native";
 import * as React from "react";
 import { ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -35,7 +34,7 @@ export default function AlertExampleScreen() {
                             With Icon
                         </Text>
                         <Alert
-                            icon={<Feather name="bell" size={24} className="color-primary" />}
+                            icon={<Bell size={24} className="color-primary" />}
                         >
                             <AlertTitle>Notification Alert</AlertTitle>
                             <AlertDescription>
@@ -51,7 +50,7 @@ export default function AlertExampleScreen() {
 
                         <Alert
                             variant="destructive"
-                            icon={<Feather name="alert-circle" size={24} color="#ef4444" />}
+                            icon={<AlertCircle size={24} color="#ef4444" />}
                             className="mb-4"
                         >
                             <AlertTitle>Error Alert</AlertTitle>
@@ -62,7 +61,7 @@ export default function AlertExampleScreen() {
 
                         <Alert
                             variant="success"
-                            icon={<Feather name="check-circle" size={24} color="#22c55e" />}
+                            icon={<CheckCircle size={24} color="#22c55e" />}
                             className="mb-4"
                         >
                             <AlertTitle>Success Alert</AlertTitle>
@@ -73,7 +72,7 @@ export default function AlertExampleScreen() {
 
                         <Alert
                             variant="warning"
-                            icon={<Feather name="alert-triangle" size={24} color="#f59e0b" />}
+                            icon={<AlertTriangle size={24} color="#f59e0b" />}
                             className="mb-4"
                         >
                             <AlertTitle>Warning Alert</AlertTitle>
@@ -84,7 +83,7 @@ export default function AlertExampleScreen() {
 
                         <Alert
                             variant="info"
-                            icon={<Feather name="info" size={24} color="#3b82f6" />}
+                            icon={<Info size={24} color="#3b82f6" />}
                         >
                             <AlertTitle>Information Alert</AlertTitle>
                             <AlertDescription>
@@ -108,7 +107,7 @@ export default function AlertExampleScreen() {
 
                         <Alert
                             variant="destructive"
-                            icon={<Feather name="alert-circle" size={24} color="#ef4444" />}
+                            icon={<AlertCircle size={24} color="#ef4444" />}
                         >
                             <AlertDescription>
                                 This is an error alert without a title.
@@ -122,7 +121,7 @@ export default function AlertExampleScreen() {
                         </Text>
                         <Alert
                             className="border-purple-500/50 bg-purple-500/10 border-l-4"
-                            icon={<Feather name="bell" size={24} color="#9333ea" />}
+                            icon={<Bell size={24} color="#9333ea" />}
                         >
                             <AlertTitle className="text-purple-700 dark:text-purple-500">
                                 Custom Alert
