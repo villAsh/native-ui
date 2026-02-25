@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Ionicons } from "@expo/vector-icons";
+import { Eye, EyeOff } from "lucide-react-native";
 import * as React from "react";
 import { KeyboardAvoidingView, Platform, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -61,11 +61,7 @@ export default function InputExample() {
                                         onPress={() => setShowPassword(!showPassword)}
                                     >
                                         <Text className="text-muted-foreground">
-                                            <Ionicons
-                                                name={showPassword ? "eye-off" : "eye"}
-                                                size={24}
-                                                color="gray"
-                                            />
+                                            {showPassword ? <EyeOff size={24} color="gray" /> : <Eye size={24} color="gray" />}
                                         </Text>
                                     </Button>
                                 </View>

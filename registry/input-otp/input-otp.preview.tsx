@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot, useOTPInput } from "@/components/ui/input-otp";
-import { Ionicons } from "@expo/vector-icons";
+import { Smartphone } from "lucide-react-native";
 import * as React from "react";
 import { Alert, KeyboardAvoidingView, Platform, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -172,7 +172,7 @@ export default function InputOTPExample() {
                             </Text>
                             <View>
                                 <View className="flex-row items-center justify-center mb-4">
-                                    <Ionicons name="phone-portrait-outline" size={24} color="gray" className="mr-2" />
+                                    <Smartphone size={24} color="gray" className="mr-2" />
                                     <Text className="text-sm font-medium text-foreground">
                                         Enter the code sent to +1 (555) 123-4567
                                     </Text>
