@@ -13,7 +13,7 @@ import {
   LayoutRectangle,
 } from "react-native";
 import { cn } from "@/lib/utils";
-import { Ionicons } from "@expo/vector-icons";
+
 
 interface DropdownProps {
   children: React.ReactNode;
@@ -42,7 +42,7 @@ interface DropdownItemProps {
   disabled?: boolean;
   destructive?: boolean;
   onSelect?: () => void;
-  icon?: React.ComponentProps<typeof Ionicons>["name"];
+  icon?: React.ReactNode;
   shortcut?: string;
 }
 
@@ -325,14 +325,14 @@ const DropdownItem = React.forwardRef<View, DropdownItemProps>(
         {...props}
       >
         {icon && (
-          <Ionicons
-            name={icon}
-            size={22}
+          <View
             className={cn(
-              "text-foreground mr-3",
+              "mr-3",
               destructive && "text-destructive"
             )}
-          />
+          >
+            {icon}
+          </View>
         )}
         <Text
           className={cn(
