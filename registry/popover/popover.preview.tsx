@@ -1,5 +1,5 @@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Ionicons } from "@expo/vector-icons";
+import { User, SlidersHorizontal, LogOut, Bell } from "lucide-react-native";
 import * as React from "react";
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -171,7 +171,7 @@ export default function PopoverExample() {
                                             className="flex-row items-center py-2 mb-2 active:bg-muted rounded-sm px-1"
                                             onPress={() => console.log("Profile pressed")}
                                         >
-                                            <Ionicons name="person-outline" size={20} color="#555" className="mr-2" />
+                                            <User size={20} color="#555" className="mr-2" />
                                             <Text className="text-foreground ml-2">Profile</Text>
                                         </Pressable>
 
@@ -179,7 +179,7 @@ export default function PopoverExample() {
                                             className="flex-row items-center py-2 mb-2 active:bg-muted rounded-sm px-1"
                                             onPress={() => console.log("Preferences pressed")}
                                         >
-                                            <Ionicons name="options-outline" size={20} color="#555" className="mr-2" />
+                                            <SlidersHorizontal size={20} color="#555" className="mr-2" />
                                             <Text className="text-foreground ml-2">Preferences</Text>
                                         </Pressable>
 
@@ -187,7 +187,7 @@ export default function PopoverExample() {
                                             className="flex-row items-center py-2 active:bg-muted rounded-sm px-1"
                                             onPress={() => console.log("Logout pressed")}
                                         >
-                                            <Ionicons name="log-out-outline" size={20} color="#555" className="mr-2" />
+                                            <LogOut size={20} color="#555" className="mr-2" />
                                             <Text className="text-foreground ml-2">Logout</Text>
                                         </Pressable>
                                     </PopoverContent>
@@ -246,7 +246,7 @@ export default function PopoverExample() {
                                     <PopoverContent className="w-72">
                                         <View className="flex-row items-center mb-3">
                                             <View className="w-10 h-10 rounded-full bg-primary items-center justify-center mr-3">
-                                                <Ionicons name="notifications" size={20} color="white" />
+                                                <Bell size={20} color="white" />
                                             </View>
                                             <View className="flex-1">
                                                 <Text className="text-foreground font-bold">New Message</Text>
