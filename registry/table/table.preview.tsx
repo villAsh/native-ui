@@ -9,7 +9,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
-import { Ionicons } from "@expo/vector-icons"
+import { TrendingUp, TrendingDown, ArrowUp, ArrowDown } from "lucide-react-native"
 import * as React from "react"
 import { Pressable, ScrollView, Text, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
@@ -177,11 +177,11 @@ export default function TableExample() {
                                                     "w-8 h-8 rounded-full mr-3 items-center justify-center",
                                                     item.category === "Income" ? "bg-green-100" : "bg-red-100"
                                                 )}>
-                                                    <Ionicons
-                                                        name={item.category === "Income" ? "trending-up" : "trending-down"}
-                                                        size={16}
-                                                        color={item.category === "Income" ? "#16a34a" : "#dc2626"}
-                                                    />
+                                                    {item.category === "Income" ? (
+                                                        <TrendingUp size={16} color="#16a34a" />
+                                                    ) : (
+                                                        <TrendingDown size={16} color="#dc2626" />
+                                                    )}
                                                 </View>
                                                 <Text className="text-foreground font-medium">{item.category}</Text>
                                             </View>
@@ -231,11 +231,11 @@ export default function TableExample() {
                                                         "w-10 h-10 rounded-full mr-3 items-center justify-center",
                                                         tx.amount >= 0 ? "bg-green-100" : "bg-red-100"
                                                     )}>
-                                                        <Ionicons
-                                                            name={tx.amount >= 0 ? "arrow-down" : "arrow-up"}
-                                                            size={20}
-                                                            color={tx.amount >= 0 ? "#16a34a" : "#dc2626"}
-                                                        />
+                                                        {tx.amount >= 0 ? (
+                                                            <ArrowDown size={20} color="#16a34a" />
+                                                        ) : (
+                                                            <ArrowUp size={20} color="#dc2626" />
+                                                        )}
                                                     </View>
                                                     <View>
                                                         <Text className="text-foreground font-medium">{tx.description}</Text>

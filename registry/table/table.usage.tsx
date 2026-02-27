@@ -9,7 +9,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
-import { Ionicons } from "@expo/vector-icons"
+import { ArrowDown, ArrowUp } from "lucide-react-native"
 import * as React from "react"
 import { Pressable, Text, View } from "react-native"
 
@@ -89,11 +89,11 @@ export default function TableExample() {
                                         "w-10 h-10 rounded-full mr-3 items-center justify-center",
                                         tx.amount >= 0 ? "bg-green-100" : "bg-red-100"
                                     )}>
-                                        <Ionicons
-                                            name={tx.amount >= 0 ? "arrow-down" : "arrow-up"}
-                                            size={20}
-                                            color={tx.amount >= 0 ? "#16a34a" : "#dc2626"}
-                                        />
+                                        {tx.amount >= 0 ? (
+                                            <ArrowDown size={20} color="#16a34a" />
+                                        ) : (
+                                            <ArrowUp size={20} color="#dc2626" />
+                                        )}
                                     </View>
                                     <View>
                                         <Text className="text-foreground font-medium">{tx.description}</Text>
