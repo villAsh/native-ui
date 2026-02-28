@@ -1,5 +1,5 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tootlip";
-import { Ionicons } from "@expo/vector-icons";
+import { HelpCircle, Info, Bell, BarChart3, Users, Settings } from "lucide-react-native";
 import * as React from "react";
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -148,7 +148,7 @@ export default function TooltipExample() {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger className="w-12 h-12 bg-muted rounded-full items-center justify-center">
-                                            <Ionicons name="help-outline" size={24} color="#666" />
+                                            <HelpCircle size={24} color="#666" />
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <Text className="text-primary-foreground">
@@ -161,7 +161,7 @@ export default function TooltipExample() {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger className="w-12 h-12 bg-muted rounded-full items-center justify-center">
-                                            <Ionicons name="information-circle-outline" size={24} color="#666" />
+                                            <Info size={24} color="#666" />
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <Text className="text-primary-foreground">
@@ -174,7 +174,7 @@ export default function TooltipExample() {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger className="w-12 h-12 bg-muted rounded-full items-center justify-center">
-                                            <Ionicons name="notifications-outline" size={24} color="#666" />
+                                            <Bell size={24} color="#666" />
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <Text className="text-primary-foreground">
@@ -275,7 +275,7 @@ export default function TooltipExample() {
                                         <Tooltip>
                                             <TooltipTrigger className="items-center">
                                                 <View className="w-16 h-16 rounded-md bg-primary/20 items-center justify-center mb-2">
-                                                    <Ionicons name="analytics-outline" size={24} color="#666" />
+                                                    <BarChart3 size={24} color="#666" />
                                                 </View>
                                                 <Text className="text-foreground text-xs">Analytics</Text>
                                             </TooltipTrigger>
@@ -291,7 +291,7 @@ export default function TooltipExample() {
                                         <Tooltip>
                                             <TooltipTrigger className="items-center">
                                                 <View className="w-16 h-16 rounded-md bg-primary/20 items-center justify-center mb-2">
-                                                    <Ionicons name="people-outline" size={24} color="#666" />
+                                                    <Users size={24} color="#666" />
                                                 </View>
                                                 <Text className="text-foreground text-xs">Users</Text>
                                             </TooltipTrigger>
@@ -307,7 +307,7 @@ export default function TooltipExample() {
                                         <Tooltip>
                                             <TooltipTrigger className="items-center">
                                                 <View className="w-16 h-16 rounded-md bg-primary/20 items-center justify-center mb-2">
-                                                    <Ionicons name="settings-outline" size={24} color="#666" />
+                                                    <Settings size={24} color="#666" />
                                                 </View>
                                                 <Text className="text-foreground text-xs">Settings</Text>
                                             </TooltipTrigger>
@@ -333,7 +333,7 @@ export default function TooltipExample() {
                                         <TooltipProvider>
                                             <Tooltip>
                                                 <TooltipTrigger>
-                                                    <Ionicons name="help-circle-outline" size={16} color="#666" />
+                                                    <HelpCircle size={16} color="#666" />
                                                 </TooltipTrigger>
                                                 <TooltipContent side="top">
                                                     <View>
