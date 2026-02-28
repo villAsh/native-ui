@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ToastProvider, useToast } from "@/components/ui/toast";
-import { Feather } from "@expo/vector-icons";
+import { Save, Trash2, Upload, WifiOff, Copy, Heart, Share2, Download } from "lucide-react-native";
 import { useColorScheme } from "nativewind";
 import React, { useState } from "react";
 import { ScrollView, Text, View } from "react-native";
@@ -214,7 +214,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="default"
 									onPress={() => show("Changes saved successfully!", "success")}
 								>
-									<Feather name="save" size={16} color={isDark ? "#111827" : "white"} />
+									<Save size={16} color={isDark ? "#111827" : "white"} />
 									<Text className="text-primary-foreground dark:text-primary-foreground ml-2">
 										Save Action
 									</Text>
@@ -224,7 +224,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="destructive"
 									onPress={() => show("Item deleted permanently", "error")}
 								>
-									<Feather name="trash-2" size={16} color={isDark ? "#111827" : "white"} />
+									<Trash2 size={16} color={isDark ? "#111827" : "white"} />
 									<Text className="text-destructive-foreground dark:text-destructive-foreground ml-2">
 										Delete Action
 									</Text>
@@ -236,7 +236,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="outline"
 									onPress={() => show("File uploaded successfully", "success")}
 								>
-									<Feather name="upload" size={16} color={isDark ? "white" : "#111827"} />
+									<Upload size={16} color={isDark ? "white" : "#111827"} />
 									<Text className="text-foreground dark:text-foreground ml-2">
 										Upload Complete
 									</Text>
@@ -246,7 +246,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="secondary"
 									onPress={() => show("Connection lost. Retrying...", "warning")}
 								>
-									<Feather name="wifi-off" size={16} color={isDark ? "white" : "#171717"} />
+									<WifiOff size={16} color={isDark ? "white" : "#171717"} />
 									<Text className="text-secondary-foreground dark:text-secondary-foreground ml-2">
 										Network Issue
 									</Text>
@@ -331,7 +331,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="default"
 									onPress={() => show("Copied to clipboard!", "success")}
 								>
-									<Feather name="copy" size={16} color={isDark ? "#111827" : "white"} />
+									<Copy size={16} color={isDark ? "#111827" : "white"} />
 									<Text className="text-primary-foreground dark:text-primary-foreground ml-2">
 										Copy
 									</Text>
@@ -341,7 +341,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="outline"
 									onPress={() => show("Added to favorites", "success")}
 								>
-									<Feather name="heart" size={16} color={isDark ? "white" : "#111827"} />
+									<Heart size={16} color={isDark ? "white" : "#111827"} />
 									<Text className="text-foreground dark:text-foreground ml-2">
 										Favorite
 									</Text>
@@ -353,7 +353,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="secondary"
 									onPress={() => show("Shared successfully", "info")}
 								>
-									<Feather name="share" size={16} color={isDark ? "white" : "#171717"} />
+									<Share2 size={16} color={isDark ? "white" : "#171717"} />
 									<Text className="text-secondary-foreground dark:text-secondary-foreground ml-2">
 										Share
 									</Text>
@@ -363,7 +363,7 @@ function ToastDemo({ position, setPosition }: ToastDemoProps) {
 									variant="default"
 									onPress={() => show("Download started", "info")}
 								>
-									<Feather name="download" size={16} color={isDark ? "#111827" : "white"} />
+									<Download size={16} color={isDark ? "#111827" : "white"} />
 									<Text className="text-primary-foreground dark:text-primary-foreground ml-2">
 										Download
 									</Text>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ToastProvider, useToast } from "@/components/ui/toast";
-import { Feather } from "@expo/vector-icons";
+import { CheckCircle, AlertCircle, AlertTriangle, Info, Save, Upload } from "lucide-react-native";
 import { useColorScheme } from "nativewind";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
@@ -51,8 +51,7 @@ function ToastScreen() {
 									variant="outline"
 									onPress={() => show("Operation successful!", "success")}
 								>
-									<Feather
-										name="check-circle"
+									<CheckCircle
 										size={16}
 										color={isDark ? "white" : "#111827"}
 									/>
@@ -65,8 +64,7 @@ function ToastScreen() {
 									variant="destructive"
 									onPress={() => show("Something went wrong", "error")}
 								>
-									<Feather
-										name="alert-circle"
+									<AlertCircle
 										size={16}
 										color={isDark ? "#111827" : "white"}
 									/>
@@ -81,8 +79,7 @@ function ToastScreen() {
 									variant="secondary"
 									onPress={() => show("Please review your changes", "warning")}
 								>
-									<Feather
-										name="alert-triangle"
+									<AlertTriangle
 										size={16}
 										color={isDark ? "white" : "#111827"}
 									/>
@@ -95,8 +92,7 @@ function ToastScreen() {
 									variant="ghost"
 									onPress={() => show("Here's some information", "info")}
 								>
-									<Feather
-										name="info"
+									<Info
 										size={16}
 										color={isDark ? "white" : "#111827"}
 									/>
@@ -122,8 +118,7 @@ function ToastScreen() {
 										show("Changes saved successfully!", "success");
 									}}
 								>
-									<Feather
-										name="save"
+									<Save
 										size={16}
 										color={isDark ? "#111827" : "white"}
 									/>
@@ -140,8 +135,7 @@ function ToastScreen() {
 										show("File uploaded!", "success");
 									}}
 								>
-									<Feather
-										name="upload"
+									<Upload
 										size={16}
 										color={isDark ? "white" : "#111827"}
 									/>
